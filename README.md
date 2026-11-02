@@ -65,14 +65,6 @@ Pastikan Java JDK 21 sudah terinstal dan periksa dengan:
 java -version
 ```
 
-**Error: Database connection failed**
-
-Periksa beberapa hal berikut:
-- MariaDB atau MySQL sudah berjalan.
-- Database `storage_organizer` sudah dibuat.
-- Nama database, username, password, dan port sudah benar.
-- Tabel `items` sudah tersedia.
-
 **Error: Dependency atau Maven bermasalah**
 
 Coba jalankan:
