@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.jasadesign.controller.DetailPesananController"
+      spacing="14" styleClass="content-area">
+
+    <Label fx:id="titleLabel" styleClass="title" wrapText="true"/>
+
+    <GridPane hgap="16" vgap="12" styleClass="detail-box">
+        <columnConstraints>
+            <ColumnConstraints minWidth="110" prefWidth="110"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+
+        <Label text="PEMESAN" styleClass="form-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Label fx:id="pemesanLabel" styleClass="detail-value" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="JENIS" styleClass="form-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Label fx:id="typeLabel" styleClass="detail-value" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="DESKRIPSI" styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Label fx:id="descLabel" styleClass="detail-value" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="WARNA" styleClass="form-label" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <Label fx:id="colorLabel" styleClass="detail-value" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="UKURAN" styleClass="form-label" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <Label fx:id="sizeLabel" styleClass="detail-value" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Label text="REFERENSI" styleClass="form-label" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <Label fx:id="refLabel" styleClass="detail-value" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+        <Label text="DEADLINE" styleClass="form-label" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+        <Label fx:id="deadlineLabel" styleClass="detail-value" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+        <Label text="DIBUAT" styleClass="form-label" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+        <Label fx:id="createdLabel" styleClass="detail-value" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <Label text="STATUS" styleClass="form-label"/>
+    <ComboBox fx:id="statusCombo" maxWidth="Infinity"/>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <padding><Insets top="6"/></padding>
+        <Button text="Tutup" onAction="#handleClose" styleClass="secondary-button"/>
+        <Button fx:id="saveButton" text="Simpan Status" onAction="#handleSave" styleClass="primary-button"/>
+    </HBox>
+</VBox>

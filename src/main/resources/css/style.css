@@ -1,103 +1,182 @@
 .root {
-    -fx-font-family: "Arial";
-    -fx-background-color: #F4F6FA;
+    -fx-font-family: "System";
+    -fx-font-size: 14px;
+    -fx-background-color: #F3EFE8;
+    -fx-text-fill: #1F1D1A;
 }
 
-.sidebar {
-    -fx-background-color: #172B4D;
-    -fx-pref-width: 220px;
-    -fx-padding: 25px 15px;
+/* ---------- Login ---------- */
+.login-root {
+    -fx-background-color: #F3EFE8;
+    -fx-padding: 40;
 }
 
-.sidebar-title {
-    -fx-text-fill: white;
-    -fx-font-size: 20px;
+.title {
+    -fx-font-size: 26px;
     -fx-font-weight: bold;
+    -fx-text-fill: #1F1D1A;
 }
 
-.sidebar-subtitle {
-    -fx-text-fill: #B8C7DF;
-    -fx-font-size: 11px;
+.subtitle {
+    -fx-text-fill: #6B655C;
 }
 
-.menu-button {
-    -fx-background-color: transparent;
-    -fx-text-fill: #DCE6F5;
-    -fx-font-size: 13px;
-    -fx-alignment: CENTER_LEFT;
-    -fx-pref-width: 190px;
-    -fx-padding: 12px;
-    -fx-cursor: hand;
-}
-
-.menu-button:hover {
-    -fx-background-color: #29466F;
-    -fx-background-radius: 6px;
-}
-
-.logout-button {
-    -fx-background-color: #D9534F;
-    -fx-text-fill: white;
-    -fx-font-weight: bold;
-    -fx-background-radius: 6px;
-    -fx-cursor: hand;
-}
-
-.page-title {
-    -fx-font-size: 24px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #26364A;
-}
-
-.page-subtitle {
-    -fx-font-size: 13px;
-    -fx-text-fill: #7B8798;
-}
-
-.stat-card {
-    -fx-background-color: white;
-    -fx-background-radius: 10px;
-    -fx-padding: 18px;
-    -fx-pref-width: 190px;
-    -fx-effect: dropshadow(gaussian, #00000012, 8, 0, 0, 2);
-}
-
-.stat-label {
-    -fx-text-fill: #7B8798;
-    -fx-font-size: 12px;
-}
-
-.stat-value {
-    -fx-text-fill: #26364A;
-    -fx-font-size: 25px;
-    -fx-font-weight: bold;
-}
-
-.content-card {
-    -fx-background-color: white;
-    -fx-background-radius: 10px;
-    -fx-padding: 18px;
-}
-
+/* ---------- Tombol ---------- */
 .primary-button {
-    -fx-background-color: #246BCE;
-    -fx-text-fill: white;
+    -fx-background-color: #B4472B;
+    -fx-text-fill: #FBF9F5;
     -fx-font-weight: bold;
-    -fx-background-radius: 6px;
-    -fx-padding: 10px 16px;
+    -fx-background-radius: 3;
+    -fx-padding: 8 18;
     -fx-cursor: hand;
 }
 
 .primary-button:hover {
-    -fx-background-color: #1856A8;
+    -fx-background-color: #98391F;
 }
 
+.secondary-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #1F1D1A;
+    -fx-border-color: #1F1D1A;
+    -fx-border-width: 1;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+    -fx-padding: 7 16;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #E8E2D6;
+}
+
+/* ---------- Input ---------- */
+.text-field, .password-field, .text-area, .combo-box, .date-picker .text-field {
+    -fx-background-color: #FBF9F5;
+    -fx-border-color: #DDD6CA;
+    -fx-border-width: 1;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+    -fx-padding: 7 10;
+}
+
+.text-field:focused, .password-field:focused, .text-area:focused {
+    -fx-border-color: #B4472B;
+}
+
+.text-area .content {
+    -fx-background-color: #FBF9F5;
+}
+
+.form-label {
+    -fx-text-fill: #6B655C;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+/* ---------- Dashboard ---------- */
+.topbar {
+    -fx-background-color: #FBF9F5;
+    -fx-border-color: transparent transparent #DDD6CA transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 14 28;
+}
+
+.app-name {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.user-label {
+    -fx-text-fill: #6B655C;
+}
+
+.content-area {
+    -fx-padding: 24 28;
+}
+
+.section-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.stat-card {
+    -fx-background-color: #FBF9F5;
+    -fx-border-color: #DDD6CA;
+    -fx-border-width: 1;
+    -fx-padding: 14 18;
+    -fx-min-width: 150;
+}
+
+.stat-value {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+}
+
+.stat-label {
+    -fx-text-fill: #6B655C;
+    -fx-font-size: 12px;
+}
+
+/* ---------- Tabel ---------- */
 .table-view {
-    -fx-background-color: white;
-    -fx-border-color: #E3E8EF;
-    -fx-border-radius: 5px;
+    -fx-background-color: #FBF9F5;
+    -fx-border-color: #DDD6CA;
+    -fx-border-width: 1;
 }
 
-.table-view .column-header {
-    -fx-background-color: #EDF2F8;
+.table-view .column-header-background {
+    -fx-background-color: #EFE9DD;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: #EFE9DD;
+    -fx-border-color: transparent transparent #DDD6CA transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #6B655C;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell {
+    -fx-background-color: #FBF9F5;
+    -fx-border-color: transparent transparent #EFE9DD transparent;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #EADFCB;
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: #1F1D1A;
+}
+
+.table-cell {
+    -fx-alignment: CENTER_LEFT;
+    -fx-text-fill: #1F1D1A;
+}
+
+/* ---------- Badge status ---------- */
+.badge {
+    -fx-padding: 2 10;
+    -fx-background-radius: 3;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.badge-menunggu {
+    -fx-background-color: #F1E3BE;
+    -fx-text-fill: #8A5A12;
+}
+
+.badge-diproses {
+    -fx-background-color: #D3E4E1;
+    -fx-text-fill: #27595C;
+}
+
+.badge-selesai {
+    -fx-background-color: #DDE6CC;
+    -fx-text-fill: #47602F;
 }

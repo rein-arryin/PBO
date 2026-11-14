@@ -1,22 +1,21 @@
 package com.jasadesign.database;
 
+import com.jasadesign.config.AppConfig;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DatabaseConnection {
+public final class DatabaseConnection {
 
-    private static final String URL =
-            "jdbc:mariadb://localhost:3306/jasa_desain";
+    private DatabaseConnection() {
+    }
 
-    private static final String USER = "root";
-    private static final String PASSWORD = "root123";
+    public static Connection getConnection() throws SQLException {
+        return getConnection(AppConfig.DB_URL, AppConfig.DB_USER, AppConfig.DB_PASSWORD);
+    }
 
-    public static Connection getConnection()
-            throws SQLException {
-
-        return DriverManager.getConnection(
-                URL, USER, PASSWORD
-        );
+    public static Connection getConnection(String url, String user, String password) throws SQLException {
+        return DriverManager.getConnection(url, user, password);
     }
 }

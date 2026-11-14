@@ -2,8 +2,8 @@ package com.jasadesign.model;
 
 public class Pembuat extends User {
 
-    public Pembuat(int id, String username){
-        super(id,username);
+    public Pembuat(int id, String username, String password) {
+        super(id,username, password);
     }
 
     @Override
