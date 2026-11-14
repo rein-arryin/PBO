@@ -50,7 +50,7 @@ Jika ingin menjalankan aplikasi melalui IntelliJ IDEA:
 2. Pilih **Open**.
 3. Pilih folder `PenyimpananGudang`.
 4. Tunggu hingga Maven selesai mengunduh dependency.
-5. Buka `src/main/java/com/penyimpanangudang/Main.java`.
+5. Buka `src/main/java/com/Main.java`.
 6. Klik tombol Run pada class `Main`.
 
 ## 7. Jika Terjadi Error

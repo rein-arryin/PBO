@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="root"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.jasadesign.controller.PemesanController"
+            stylesheets="@../css/style.css">
+
+    <left>
+        <VBox styleClass="sidebar" spacing="18">
+            <VBox spacing="5">
+                <Label text="JASA DESAIN" styleClass="sidebar-title"/>
+                <Label text="Sistem Pemesanan" styleClass="sidebar-subtitle"/>
+            </VBox>
+
+            <Separator opacity="0.3"/>
+
+            <Button text="Dashboard"
+                    styleClass="menu-button"
+                    onAction="#handleDashboard"
+                    maxWidth="Infinity"/>
+
+            <Button text="Buat Pesanan"
+                    styleClass="menu-button"
+                    onAction="#handleBuatPesanan"
+                    maxWidth="Infinity"/>
+
+            <Button text="Pesanan Saya"
+                    styleClass="menu-button"
+                    onAction="#handlePesananSaya"
+                    maxWidth="Infinity"/>
+
+            <Region VBox.vgrow="ALWAYS"/>
+
+            <Button fx:id="btnLogout"
+                    text="Logout"
+                    onAction="#handleLogout"
+                    styleClass="logout-button"
+                    maxWidth="Infinity"/>
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane fx:id="contentArea"
+                   style="-fx-padding: 30px;"/>
+    </center>
+
+</BorderPane>
